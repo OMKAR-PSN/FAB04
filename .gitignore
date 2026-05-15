@@ -1,8 +1,5 @@
-# Python
-.venv/
+dataset/
+venv/
 __pycache__/
 *.pyc
-.vscode/
-/.vscode/
-workspaceStorage/
-*.egg-info/
+.env

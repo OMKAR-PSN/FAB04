@@ -8,7 +8,7 @@ if root in sys.path:
     sys.path.remove(root)
 sys.path.insert(0, root)
 # Also ensure the copied bench directory is importable (after fab04)
-bench_dir = os.path.join(root, 'out', 'bench-p04-pcam')
+bench_dir = os.path.join(root, 'bench-p04-pcam')
 if bench_dir in sys.path:
     sys.path.remove(bench_dir)
 sys.path.insert(1, bench_dir)
