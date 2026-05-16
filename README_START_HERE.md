@@ -14,7 +14,7 @@ Recommended run pattern:
 ```powershell
 Push-Location C:\Users\Omkar\Desktop\FAB04\Anvil-P-E\bench-p04-pcam
 $env:PYTHONPATH = 'C:\Users\Omkar\Desktop\FAB04\fab04'
-c:/python313/python.exe self_check.py --adapter adapters.myteam:Engine --quick
+c:/python313/python.exe self_check.py --adapter adapters.FAB04:Engine --quick
 Pop-Location
 ```
 
@@ -204,16 +204,16 @@ pip install -r requirements.txt
 ### Testing
 ```bash
 # Quick (10s, 2 seeds)
-python self_check.py --adapter adapters.myteam:Engine --quick
+python self_check.py --adapter adapters.FAB04:Engine --quick
 
 # Full (5 min, 7 seeds)
-python run.py --adapter adapters.myteam:Engine \
+python run.py --adapter adapters.FAB04:Engine \
   --seeds 7 13 31 97 211 503 1009 --out final_report.json
 ```
 
 ### Submission
 ```bash
-git add adapters/myteam.py README.md writeup.md final_report.json
+git add adapters/FAB04.py README.md writeup.md final_report.json
 git commit -m "PCAM P-04: hybrid variance+geometry precision agent"
 git tag v-final
 git push

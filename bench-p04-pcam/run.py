@@ -3,7 +3,7 @@ P-04 benchmark runner.
 
 Usage:
     python run.py --adapter adapters.dummy:DummyAgent
-    python run.py --adapter adapters.myteam:Engine --seeds 42 101 202 303 404 --out report.json
+    python run.py --adapter adapters.FAB04:Engine --seeds 42 101 202 303 404 --out report.json
 """
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ def agent_factory_from_spec(spec: str) -> Callable[[np.ndarray, dict[str, Any]],
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Anvil P-04 · PCAM benchmark")
     ap.add_argument("--adapter", required=True,
-                    help="module:Class, e.g. adapters.myteam:Engine")
+                    help="module:Class, e.g. adapters.FAB04:Engine")
     ap.add_argument("--seeds", type=int, nargs="+",
                     default=[42, 101, 202, 303, 404],
                     help="Pattern + query seeds (any integers). Multi-seed evaluation is "

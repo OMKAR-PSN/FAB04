@@ -32,7 +32,7 @@ adapters/
 
 ## What you implement
 
-Copy `adapters/dummy.py` to `adapters/myteam.py` and replace `predict_precision`:
+Copy `adapters/dummy.py` to `adapters/FAB04.py` and replace `predict_precision`:
 
 ```python
 from adapter import Adapter
@@ -65,7 +65,7 @@ Same defence model as P-01 and P-02. You see the first two; you do not see the t
 **L2 — Property-based multi-seed.** `--seeds` accepts ANY integers. For each seed, the harness builds a **fresh pattern matrix, fresh structured operator R, fresh query set** and **constructs a fresh adapter instance**. State and tuning cannot leak between seeds. A hardcoded agent passes L1 trivially and fails L2 immediately because every numeric value the agent was tuned against is regenerated.
 
 ```bash
-python run.py --adapter adapters.myteam:Engine \
+python run.py --adapter adapters.FAB04:Engine \
   --seeds 7 13 31 97 211 503 1009 --K 16 --N 64
 ```
 
